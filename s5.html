@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="script.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  
+</head>
+<body>
+ 
+     <div class="container">
+
+    <form class="well form-horizontal" type=post action="index.html" name="StudentRegistration" onsubmit="return(validate());" >
+<fieldset>
+
+<!-- Form Name -->
+<legend><center><h2><b>Registration Form</b></h2></center></legend><br>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">First Name</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input type=text name=textname id="textname" placeholder="First Name" class="form-control">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Last Name</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input type="text" name="lastname" id="lastname" placeholder="Last Name" class="form-control"  >
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Gender</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <input type="radio" name="sex" value="male" size="10">Male
+<input type="radio" name="sex" value="Female" size="10">Female
+<input type="radio" name="sex" value="Trans" size="10">Other
+    </div>
+  </div>
+</div>
+<input type="hidden" name="gender" id="e1">
+
+<!-- Text input-->
+
+       <div class="form-group">
+  <label class="col-md-4 control-label">E-Mail</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+        <input type="text" name="emailid" id="emailid" placeholder="E-Mail Address" class="form-control">
+    </div>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >DOB</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input type="text" name="dob" id="dob" placeholder="dd-mm-yyyy" class="form-control" >
+   </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Contact No.</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+        <input type="text" name="mobileno" id="mobileno" placeholder="xxx-xxxx-xxxx" class="form-control" onkeypress="return numberPressed(event);" >
+    </div>
+  </div>
+</div>
+
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Password</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input type="password" name="password" id="password" placeholder="Password" class="form-control"  >
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Post Graduation</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input type="text" name="pg1" id="pg1" placeholder="percentage" class="form-control">
+  <input type="text" name="pg2" id="pg2" placeholder="Year" class="form-control">
+    </div>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Under Graduation</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input type="text" name="ug1" id="ug1" placeholder="percentage" class="form-control">
+  <input type="text" name="ug2" id="ug2" placeholder="Year" class="form-control">
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Higher Secondary</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input type="text" name="sc1" id="sc1" placeholder="percentage" class="form-control">
+  <input type="text" name="sc2" id="sc2" placeholder="Year" class="form-control">
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Experience</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input type="text" name="exp" id="exp" placeholder="Experience in years" class="form-control" >
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Primary Skills</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input type="text" name="ps" id="ps"  class="form-control" >
+   </div>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Secondary Skills</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input type="text" name="ss" id="ss"  class="form-control" >
+    </div>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Current Ctc</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input type="text" name="cc" id="cc"  class="form-control" >
+
+    </div>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Expected Ctc</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input type="text" name="ec" id="ec"  class="form-control" >
+
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Reason for change</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input type="text" name="reason" id="reason"  class="form-control" >
+
+    </div>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Notice Period</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input type="text" name="notice" id="notice"  class="form-control" >
+
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Are you serving notice</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <input type="radio" name="sn" id="sn" size="30" value="yes" onclick="myfunc();">YES
+  <input type="radio" name="sn" id="sn" size="30" value="no" onclick="myfunc2();" >NO
+    </div>
+  </div>
+</div>
+
+<div id="ifYes" style="visibility:hidden">
+        If yes, explain: <input type='text' id="e3" name="e3" >
+        
+    </div>
+
+<br>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Current Location</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input type="text" name="cl" id="cl"  class="form-control" >
+
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Preferred Location</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input type="text" name="pl" id="pl"  class="form-control" >
+
+    </div>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Pan/Aadhar/Passport</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+<input type="radio" name="val" value="pan" size="10">Pan
+<input type="radio" name="val" value="aadhar" size="10">Aadhar
+<input type="radio" name="val" value="passport" size="10">Passport
+  </div>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Enter the value</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input type="text" name="panid" id="panid"  class="form-control" >
+  </div>
+  </div>
+</div>
+
+<input type="hidden" name="pan" id="e2">
+
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <input type="checkbox" name="agree" id="agree" size="10">I Agree to the terms and conditions
+  </div>
+  </div>
+</div>
+
+
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4"><br>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" class="btn btn-warning" name="sub" id="sub" value="Submit Form" >
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+    </div><!-- /.container --> 
+    
+    <script>
+    
+    // Format the phone number as the user types it
+document.getElementById('mobileno').addEventListener('keyup',function(evt){
+        var phoneNumber = document.getElementById('mobileno');
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        phoneNumber.value = phoneFormat(phoneNumber.value);
+});
+
+// We need to manually format the phone number on page load
+document.getElementById('mobileno').value = phoneFormat(document.getElementById('mobileno').value);
+
+// A function to determine if the pressed key is an integer
+function numberPressed(evt){
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if(charCode > 31 && (charCode < 48 || charCode > 57) && (charCode < 36 || charCode > 40)){
+                return false;
+        }
+        return true;
+}
+
+// A function to format text to look like a phone number
+function phoneFormat(input){
+        // Strip all characters from the input except digits
+        input = input.replace(/\D/g,'');
+        
+        // Trim the remaining input to ten characters, to preserve phone number format
+        input = input.substring(0,10);
+
+        // Based upon the length of the string, we add formatting as necessary
+        var size = input.length;
+        if(size == 0){
+                input = input;
+        }else if(size < 4){
+                input = '('+input;
+        }else if(size < 7){
+                input = '('+input.substring(0,3)+') '+input.substring(3,6);
+        }else{
+                input = '('+input.substring(0,3)+') '+input.substring(3,6)+' - '+input.substring(6,10);
+        }
+        return input; 
+}
+
+function myfunc()
+{ 
+  document.getElementById('ifYes').style.visibility = 'visible';
+  
+}
+
+function myfunc2()
+{
+  document.getElementById('ifYes').style.visibility = 'hidden';
+}
+  </script>
+  
+  </body>
+  </html>
