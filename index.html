@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div id="container" class="col-xs-6">       
+<input type="text" id="username" name="username" placeholder="email address">
+<input type="password" id="password" name="password" placeholder="password"> 
+<div id="lower">
+<input type="submit" value="Login" onclick="func()">
+<a href="s5.html" class="btn btn-default">Register</a>
+</div><!--/ lower-->
+<div id="show" ></div>
+</div>
+<script LANGUAGE="JavaScript">
+function getParams(){
+var idx = document.URL.indexOf('?');
+var params = new Array();
+if (idx != -1) {
+var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+for (var i=0; i<pairs.length; i++){
+nameVal = pairs[i].split('=');
+params[nameVal[0]] = nameVal[1];
+}
+}
+return params;
+}
+params = getParams();
+firstname = unescape(params["textname"]);
+lastname = unescape(params["lastname"]);
+emailid = unescape(params["emailid"]);
+dob = unescape(params["dob"]);
+gender = unescape(params["gender"]);
+pan = unescape(params["pan"]);
+panid = unescape(params["panid"]);
+mobile = unescape(params["mobileno"]);
+pass = unescape(params["password"]);
+pg1 =  unescape(params["pg1"]);
+pg2 =  unescape(params["pg2"]);
+ug1 = unescape(params["ug1"]);
+ug2 = unescape(params["ug2"]);
+sc1 = unescape(params["sc1"]);
+sc2 = unescape(params["sc2"]);
+exp = unescape(params["exp"]);
+ps = unescape(params["ps"]);
+ss = unescape(params["ss"]);
+cc = unescape(params["cc"]);
+ec = unescape(params["ec"]);
+reason = unescape(params["reason"]);
+notice = unescape(params["notice"]);
+e3 = unescape(params["e3"]);
+cl = unescape(params["cl"]);
+pl = unescape(params["pl"]);
+
+
+
+function html5_storage_support() {
+  		//check to see if this browser support local storage: return true if so, false if not
+		try {
+			return 'localStorage' in window && window['localStorage'] !== null;
+		} catch (e) {
+			return false;
+		}
+	}
+	if (html5_storage_support()) {
+  			//get the user-entered values from the two text fields:
+  			
+        var arr = {n1:firstname,n2:lastname,n3:emailid,n4:dob,n5:gender,n6:pan,n7:panid,n8:mobile,n9:pass,n10:pg1,n11:pg2,n12:ug1,n13:ug2,n14:sc1,n15:sc2,n16:exp,n17:ps,n18:ss,n19:cc,n20:ec,n21:reason,n22:notice,n23:e3,n24:cl,n25:pl};
+  			//create two local-storage keys (name1, name2) and assign
+  			//each the respective value from the text fields:
+  			users = JSON.parse(localStorage.getItem("users") || "[]");
+  			users.push(arr);
+  			localStorage.setItem("users", JSON.stringify(users));
+  		
+  		}
+function func()
+{var x = document.getElementById("username").value; 
+ var y = document.getElementById("password").value;
+
+for(i=1;i<users.length;i++)
+{
+if(users[i].n3 == x && users[i].n9 == y)
+{
+  alert("You have logged in successfully");
+  window.location.href = 'display.html';
+  }
+ 
+  
+}
+}
+
+
+
+</script>
+</body>
+</html>
